@@ -24,6 +24,8 @@ steps:
 
 - task: CopyFiles@2
   inputs:
+    sourceFolder: '$(Build.SourcesDirectory)'
+    #contents: '**/$(BuildConfiguration)/**/?(*.exe|*.dll|*.pdb)'
     Contents: '**/.war'
     TargetFolder: '$(build.artifactstagingdirectory)'
     
